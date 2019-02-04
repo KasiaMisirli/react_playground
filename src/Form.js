@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-// import List from './List'
+// import { throws } from 'assert';
+
 
 class Form extends Component {
     state = {
@@ -8,14 +9,18 @@ class Form extends Component {
     }
 
     addQuestion = (question) => {
-        this.setState({quest: question.target.value})
+        this.setState({title: question.target.value})
     }
 
     submitForm = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:3000/ratingQuestions", { quest: this.state.title})
-        .then( (response)=> console.log(response));
-        // gettingData()
+        axios.post("http://localhost:3000/ratingQuestions", {
+            title: this.state.title
+        })
+        .then( (response)=> this.props.gettingData())
+        this.setState({
+            title: ''
+        })   
     }
 
     render() {
@@ -23,9 +28,8 @@ class Form extends Component {
         <div>
             <form onSubmit={this.submitForm}>
                 <input onChange={this.addQuestion} value={this.state.question}/>
-                {this.state.title}
                 <button type="submit" value="submit">Submit</button>
-                {/* <List gettingData={this.gettingData}/> */}
+                {/* <List/> */}
             </form>
         </div>
       )

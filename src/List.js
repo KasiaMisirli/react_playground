@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import Form from './Form'
 
 class List extends Component {
     state = {
@@ -17,6 +18,7 @@ class List extends Component {
     render(){
         return(
             <div>
+            <Form gettingData={this.gettingData}/>
             <button onClick={this.gettingData}>Display saved questions</button>
             {this.displayData()}
             </div>
