@@ -1,0 +1,44 @@
+{
+  "ratingQuestions": [
+    {
+      "id": 1,
+      "title": "Werewolf is a great game to play."
+    },
+    {
+      "id": 2,
+      "title": "Milk is not healthy"
+    },
+    {
+      "id": 3,
+      "title": "Meat is not tasty"
+    },
+    {
+      "quest": "",
+      "id": 4
+    },
+    {
+      "quest": "",
+      "id": 5
+    },
+    {
+      "quest": "",
+      "id": 6
+    },
+    {
+      "quest": "",
+      "id": 7
+    },
+    {
+      "quest": "",
+      "id": 8
+    },
+    {
+      "quest": "",
+      "id": 9
+    },
+    {
+      "quest": "",
+      "id": 10
+    }
+  ]
+}
