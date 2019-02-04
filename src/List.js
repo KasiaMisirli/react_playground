@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import Form from './Form'
+import Options from './Options'
 
 class List extends Component {
     state = {
@@ -12,7 +13,9 @@ class List extends Component {
     }
     displayData = () => {
         console.log(this.state.data)
-        return this.state.data.map((qu,i) => <h2 key={i}>{qu.title}</h2>)
+        return this.state.data.map((qu,i) => <div><h2 options={this.options} key={i}>{qu.title}</h2>
+        <Options/></div>
+        )
     }
    
     render(){
@@ -21,6 +24,7 @@ class List extends Component {
             <Form gettingData={this.gettingData}/>
             <button onClick={this.gettingData}>Display saved questions</button>
             {this.displayData()}
+            <Options options={this.options}/>
             </div>
         )
     }

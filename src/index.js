@@ -7,14 +7,10 @@ import List from './List'
 
 
 class App extends Component {
-  // constructor() {
-  //   super();
-  // }
   render() {
     return(
       <div>
         <Hello name="REACT"/>
-        {/* <Form/> */}
         <List/>
       </div>
     )
