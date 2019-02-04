@@ -28,8 +28,7 @@ class Form extends Component {
         <div>
             <form onSubmit={this.submitForm}>
                 <input onChange={this.addQuestion} value={this.state.question}/>
-                <button type="submit" value="submit">Submit</button>
-                {/* <List/> */}
+                <button type="submit" value="submit">Add new question</button>
             </form>
         </div>
       )

@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
-// import Form from './Form'
-import List from './List'
+import QuestionList from './QuestionList'
 
 
 class App extends Component {
@@ -11,9 +10,9 @@ class App extends Component {
     return(
       <div>
         <Hello name="REACT"/>
-        <List/>
+        <QuestionList/>
       </div>
     )
-}
+  }
 }
 render(<App/>, document.getElementById('root'));
